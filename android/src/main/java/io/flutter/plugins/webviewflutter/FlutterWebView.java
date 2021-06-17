@@ -49,6 +49,7 @@ public class FlutterWebView implements PlatformView, MethodCallHandler {
     @Override
     public boolean onCreateWindow(
         final WebView view, boolean isDialog, boolean isUserGesture, Message resultMsg) {
+      view.setLayerType(View.LAYER_TYPE_HARDWARE, null);
       final WebViewClient webViewClient =
           new WebViewClient() {
             @TargetApi(Build.VERSION_CODES.LOLLIPOP)
